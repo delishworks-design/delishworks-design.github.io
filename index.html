@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Bloom</title>
+<style>
+:root{--bg:#FDF3F1;--card:#FFFFFF;--text:#4A3A3E;--muted:#8A7378;--accent:#C4567A;--line:#F0DDE1}
+@media (prefers-color-scheme:dark){
+ :root{--bg:#211A1C;--card:#2B2225;--text:#F2E7E9;--muted:#B9A6AA;--accent:#E39DB4;--line:#3D3134}
+ body{background:#211A1C}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:24px 20px;color:var(--text);font:400 17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px 26px;max-width:420px;width:100%;text-align:center;box-shadow:0 12px 36px rgba(150,90,110,.10)}
+h1{font-size:1.45rem;line-height:1.25;margin:0 0 12px;color:var(--accent)}
+p{margin:0 0 12px;font-size:1rem}
+.note{color:var(--muted);font-size:.85rem;margin:16px 0 0}
+</style>
+</head>
+<body>
+<main class="card">
+<h1>Email confirmed</h1>
+<p>You can now sign in to Bloom. Go back to the app and log in with your email and password.</p>
+<p class="note">You can close this page.</p>
+</main>
+<script>
+if(location.hash!==''){history.replaceState(null,'',location.pathname+location.search)}
+</script>
+</body>
+</html>
